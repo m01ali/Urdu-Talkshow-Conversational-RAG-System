@@ -1,0 +1,55 @@
+.homepage{
+    background-image: url("@/assets/bg4.webp");
+    background-position: center;
+    background-size:  cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* ____________________________________________________ */
+
+.adminpagee{
+    background-image: url("@/assets/bg3.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* _________________________________________________________ */
+
+.chatbotPage{
+    background-image: url("@/assets/bg3.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* _________________________________________________________ */
+
+.chatpage {
+    background-image: linear-gradient(rgba(100, 100, 100, 0.4), rgba(100, 100, 100, 0.4)), url("@/assets/bg1.webp");
+    background-blend-mode:luminosity ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+
+/* _________________________________________________________ */
+
+.browseallPage{
+    background-image: url("@/assets/bg1.webp");
+    background-position: center;
+    background-size:  cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+  

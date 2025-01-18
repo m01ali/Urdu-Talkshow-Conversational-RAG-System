@@ -1,0 +1,49 @@
+[33mWARNING[0m:  [12-09-2024 12:21:30] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [12-09-2024 12:21:31] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [12-09-2024 12:21:31] Starting component System
+[36mDEBUG[0m:    [12-09-2024 12:21:31] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [12-09-2024 12:21:31] Starting component SqliteDB
+[36mDEBUG[0m:    [12-09-2024 12:21:31] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [12-09-2024 12:21:31] Starting component Posthog
+[36mDEBUG[0m:    [12-09-2024 12:21:31] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [12-09-2024 12:21:31] Starting component SegmentAPI
+[32mINFO[0m:     [12-09-2024 12:21:31] Started server process [[36m10472[0m]
+[32mINFO[0m:     [12-09-2024 12:21:31] Waiting for application startup.
+[32mINFO[0m:     [12-09-2024 12:21:31] Application startup complete.
+[32mINFO[0m:     [12-09-2024 12:21:31] Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [12-09-2024 12:21:32] Backing off send_request(...) for 0.4s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us-api.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)'))))
+[32mINFO[0m:     [12-09-2024 12:21:32] Backing off send_request(...) for 2.0s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us-api.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)'))))
+[32mINFO[0m:     [12-09-2024 12:21:34] Backing off send_request(...) for 2.3s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us-api.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)'))))
+[31mERROR[0m:    [12-09-2024 12:21:36] Giving up send_request(...) after 4 tries (requests.exceptions.SSLError: HTTPSConnectionPool(host='us-api.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)'))))
+[32mINFO[0m:     [12-09-2024 12:21:58] ::1:58591 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [12-09-2024 12:21:58] ::1:58591 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [12-09-2024 12:22:00] ::1:58595 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [12-09-2024 12:22:00] ::1:58595 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [12-09-2024 12:23:58] Shutting down
+[32mINFO[0m:     [12-09-2024 12:23:58] Waiting for application shutdown.
+[36mDEBUG[0m:    [12-09-2024 12:23:58] Stopping component System
+[36mDEBUG[0m:    [12-09-2024 12:23:58] Stopping component SegmentAPI
+[36mDEBUG[0m:    [12-09-2024 12:23:58] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [12-09-2024 12:23:58] Stopping component Posthog
+[36mDEBUG[0m:    [12-09-2024 12:23:58] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [12-09-2024 12:23:58] Stopping component SqliteDB
+[36mDEBUG[0m:    [12-09-2024 12:23:58] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [12-09-2024 12:23:58] Application shutdown complete.
+[32mINFO[0m:     [12-09-2024 12:23:58] Finished server process [[36m10472[0m]
+[33mWARNING[0m:  [12-09-2024 12:24:17] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [12-09-2024 12:24:18] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [12-09-2024 12:24:18] Starting component System
+[36mDEBUG[0m:    [12-09-2024 12:24:18] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [12-09-2024 12:24:18] Starting component SqliteDB
+[36mDEBUG[0m:    [12-09-2024 12:24:18] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [12-09-2024 12:24:18] Starting component Posthog
+[36mDEBUG[0m:    [12-09-2024 12:24:18] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [12-09-2024 12:24:18] Starting component SegmentAPI
+[32mINFO[0m:     [12-09-2024 12:24:18] Started server process [[36m5352[0m]
+[32mINFO[0m:     [12-09-2024 12:24:18] Waiting for application startup.
+[32mINFO[0m:     [12-09-2024 12:24:18] Application startup complete.
+[32mINFO[0m:     [12-09-2024 12:24:18] Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [12-09-2024 12:24:28] ::1:58884 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [12-09-2024 12:24:28] ::1:58884 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [12-09-2024 12:24:31] ::1:58893 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [12-09-2024 12:24:31] ::1:58893 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200

@@ -1,0 +1,8 @@
+LAMA decoder 
+improve by adding an encoder for urdu embedding instead of OpenAi
+speaker assignment
+
+go through facebook seamless model
+
+-------
+check how many speakers are actually there

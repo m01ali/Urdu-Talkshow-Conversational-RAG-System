@@ -1,0 +1,11 @@
+Use pycharm otherwise activate env: conda activate talkshow
+
+Run commands in order:
+chroma run --path "D:\talkshows" --port 8001
+python manage.py runserver
+cd frontend
+npm run dev
+
+Access UI at http://localhost:5173/
+
+API keys yet to set..

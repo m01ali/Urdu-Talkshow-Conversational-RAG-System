@@ -1,0 +1,20 @@
+.DocumentCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+    background-color: rgb(241, 245, 249);
+}
+
+.DocumentCard p{
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    word-wrap: break-word; /* Fallback for older browsers */
+}
+
+.DocumentCard:hover{
+    background-color: rgb(230, 235, 240);
+}

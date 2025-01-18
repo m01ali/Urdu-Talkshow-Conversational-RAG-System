@@ -1,0 +1,41 @@
+.sidecontentarea{
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    border-radius: 10px;
+    min-height: 85vh;
+    max-height: 85vh;
+    overflow-y: auto;   
+}
+
+.sidecontentarealoader{
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    border-radius: 10px;
+    min-height: 85vh;
+    max-height: 85vh;
+    overflow-y: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+/* Hide the default scrollbar */
+.sidecontentarea::-webkit-scrollbar {
+    width: 3px;
+}
+  
+  /* Track */
+.sidecontentarea::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background */
+}
+  
+  /* Handle */
+.sidecontentarea::-webkit-scrollbar-thumb {
+    background: #888; /* Dark gray color for the scrollbar handle */
+    border-radius: 5px; /* Rounded corners */
+}
+  
+  /* Handle on hover */
+.sidecontentarea::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker gray color on hover */
+}

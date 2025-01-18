@@ -1,0 +1,66 @@
+.messagearea{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    overflow-y: auto;
+    gap: 10px;
+    min-height: 76vh;
+    max-height: 76vh;
+}
+
+.sidemessagearea{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    overflow-y: auto;
+    gap: 10px;
+    min-height: 325px;
+    max-height: 325px;
+}
+
+/* ///////////////////////////////////// */
+
+/* Hide the default scrollbar */
+.messagearea::-webkit-scrollbar {
+    width: 3px;
+}
+  
+  /* Track */
+.messagearea::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background */
+}
+  
+  /* Handle */
+.messagearea::-webkit-scrollbar-thumb {
+    background: #888; /* Dark gray color for the scrollbar handle */
+    border-radius: 5px; /* Rounded corners */
+}
+  
+  /* Handle on hover */
+.messagearea::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker gray color on hover */
+}
+
+
+/* ///////////////////////////////////// */
+
+.sidemessagearea::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.sidemessagearea::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+}
+
+/* Handle */
+.sidemessagearea::-webkit-scrollbar-thumb {
+  background: #888; /* Dark gray color for the scrollbar handle */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Handle on hover */
+.sidemessagearea::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker gray color on hover */
+}
+  

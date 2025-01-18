@@ -1,0 +1,1 @@
+# views are stored in separate folders in the views folder 
