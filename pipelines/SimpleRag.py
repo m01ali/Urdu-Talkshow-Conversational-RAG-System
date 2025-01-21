@@ -28,7 +28,7 @@ import uuid
 
 from utils.connection import Connection
 
-os.environ["OPENAI_API_KEY"] = "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"
+# os.environ["OPENAI_API_KEY"] = ""
 
 load_dotenv()
 
