@@ -2,16 +2,19 @@ import whisperx
 import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
+import torch
 import os
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-hf_token = "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"
-groq_api_key = "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"
+HUGGING_FACE_KEY = os.environ.get('HUGGING_FACE_KEY')
+GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 class AudioTranscription:
-    def __init__(self, device="cuda", batch_size=16, compute_type="float16"):
+    def __init__(self, device= device, batch_size=16, compute_type="float16"):
         self.device = device
         self.batch_size = batch_size
         self.compute_type = compute_type
@@ -122,7 +125,7 @@ def process_audio(audio_file_path):
             for index, row in df.iterrows():
                 f.write(f"Start: {row['start']}, End: {row['end']}, Text: {row['text']}, Speaker: {row['speaker']}\n")
 
-        groq_api = GroqAPI(groq_api_key)
+        groq_api = GroqAPI(GROQ_API_KEY)
         df['text'] = df['text'].apply(groq_api.improve_transcription)
 
         # Save Groq LLM improved transcription

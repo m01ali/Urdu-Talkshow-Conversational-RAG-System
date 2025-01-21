@@ -9,3 +9,13 @@ npm run dev
 Access UI at http://localhost:5173/
 
 API keys yet to set..
+
+
+
+Setting up WhisperX for the first time. Run commands in order:
+git config --global http.postBuffer 1048576000
+git config --global http.maxRequestBuffer 1048576000
+git clone --depth 1 https://github.com/m-bain/whisperX.git
+cd whisperX
+pip install .
+python -c "import whisperX; print('WhisperX installed successfully!')"
