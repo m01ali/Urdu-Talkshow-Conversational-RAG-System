@@ -43,3 +43,6 @@ build/
 .next/
 .cache/
 .vite/
+
+# Exclude Downloaded-audios folder
+Downloaded-audios/

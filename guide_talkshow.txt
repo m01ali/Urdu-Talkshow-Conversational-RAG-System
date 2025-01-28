@@ -10,7 +10,15 @@ Access UI at http://localhost:5173/
 
 API keys yet to set..
 
+------------------------------------------------------------------
+ffmpeg  
+Open PowerShell as Administrator: (install chocolatey)
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
+Restart PowerShell
+choco --version
+choco install ffmpeg
+ffmpeg -version
 ------------------------------------------------------------------
 Setting up WhisperX for the first time. Run commands in order:
 git config --global http.postBuffer 1048576000

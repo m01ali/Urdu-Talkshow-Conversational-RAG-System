@@ -7,6 +7,7 @@ import os
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+import requests
 
 HUGGING_FACE_KEY = os.environ.get('HUGGING_FACE_KEY')
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
@@ -14,7 +15,7 @@ GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 class AudioTranscription:
-    def __init__(self, device= device, batch_size=16, compute_type="float16"):
+    def __init__(self, device="cuda", batch_size=16, compute_type="float16"):
         self.device = device
         self.batch_size = batch_size
         self.compute_type = compute_type
@@ -70,7 +71,7 @@ class AudioTranscription:
 class GroqAPI:
     def __init__(self, api_key):
         self.api_key = api_key
-        self.llm = ChatGroq(temperature=0.5, groq_api_key=self.api_key, model_name="Llama-3.1-70b-versatile")
+        self.llm = ChatGroq(temperature=0.5, groq_api_key=self.api_key, model_name="llama-3.3-70b-versatile")
         self.prompt_template = """
         You are an expert proof reader for Urdu transcription written for Pakistani talk shows. You identify
         and correct all grammatical and spelling errors that are present in the given transcription. Your task
@@ -120,33 +121,46 @@ def process_audio(audio_file_path):
     result = transcriber.transcribe_audio(audio_file_path)
     df = transcriber.convert_to_df(result)
     if df is not None:
-        # Save initial WhisperX transcription
-        with open('whisperx_transcription.txt', 'w', encoding='utf-8') as f:
+        # Create transcripts folder if it doesn't exist
+        transcripts_folder = "transcripts"
+        os.makedirs(transcripts_folder, exist_ok=True)
+
+        # Extract the original file name without extension
+        base_name = os.path.splitext(os.path.basename(audio_file_path))[0]
+
+        # Save initial WhisperX transcription as TXT
+        whisperx_txt_path = os.path.join(transcripts_folder, f"{base_name}_whisperx_transcription.txt")
+        with open(whisperx_txt_path, 'w', encoding='utf-8') as f:
             for index, row in df.iterrows():
                 f.write(f"Start: {row['start']}, End: {row['end']}, Text: {row['text']}, Speaker: {row['speaker']}\n")
 
         groq_api = GroqAPI(GROQ_API_KEY)
         df['text'] = df['text'].apply(groq_api.improve_transcription)
 
-        # Save Groq LLM improved transcription
-        with open('groq_transcription.txt', 'w', encoding='utf-8') as f:
+        # Save Groq LLM improved transcription as TXT
+        groq_txt_path = os.path.join(transcripts_folder, f"{base_name}_groq_transcription.txt")
+        with open(groq_txt_path, 'w', encoding='utf-8') as f:
             for index, row in df.iterrows():
                 f.write(f"Start: {row['start']}, End: {row['end']}, Text: {row['text']}, Speaker: {row['speaker']}\n")
 
         mapper = SpeakerNameMapper(df)
         final_df = mapper.map_speakers()
-        with open('generated_transcription.txt', 'w', encoding='utf-8') as f:
+
+        # Save final generated transcription as TXT
+        final_txt_path = os.path.join(transcripts_folder, f"{base_name}_generated_transcription.txt")
+        with open(final_txt_path, 'w', encoding='utf-8') as f:
             for index, row in final_df.iterrows():
                 f.write(f"Start: {row['start']}, End: {row['end']}, Text: {row['text']}, Speaker: {row['speaker']}\n")
+
         return final_df
     else:
         print("Transcription failed.")
         return None
 
 if __name__ == "__main__":
-    audio_file_path = "/content/samaa-talkshow.wav"
+    audio_file_path = "/content/Downloaded-audios/sama-talkshow.mp4"
     final_df = process_audio(audio_file_path)
     if final_df is not None:
         print("Transcription with Speaker Diarization:")
         print(final_df)
-        print("Transcription saved to 'generated_transcription.txt'")
+        print("Transcription saved in the 'transcripts' folder as TXT files with the original file name.")
