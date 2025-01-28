@@ -1,4 +1,45 @@
-.venv/
-*.pyc
+# Virtual environment
+env/
+venv/
+
+# Python cache
 __pycache__/
-.DS_Store
+*.py[cod]
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Byte-compiled and temporary files
+*.swp
+*.swo
+*.bak
+*.log
+*.tmp
+
+# SQLite database files
+*.sqlite3
+db.sqlite3
+chroma.sqlite3
+
+# Logs
+*.log
+chroma.log
+
+# Git submodule metadata (if you don’t want it in the repo)
+.gitmodules
+
+# Python dependencies
+*.egg-info/
+dist/
+build/
+
+# Node.js dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+.next/
+.cache/
+.vite/
