@@ -470,3 +470,43 @@
 [36mDEBUG[0m:    [25-12-2024 14:19:44] Stopping component OpenTelemetryClient
 [32mINFO[0m:     [25-12-2024 14:19:44] Application shutdown complete.
 [32mINFO[0m:     [25-12-2024 14:19:44] Finished server process [[36m14576[0m]
+[33mWARNING[0m:  [27-01-2025 17:30:05] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [27-01-2025 17:30:06] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component System
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component SqliteDB
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component Posthog
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component LocalExecutor
+[36mDEBUG[0m:    [27-01-2025 17:30:06] Starting component SegmentAPI
+[32mINFO[0m:     [27-01-2025 17:30:07] Started server process [[36m15932[0m]
+[32mINFO[0m:     [27-01-2025 17:30:07] Waiting for application startup.
+[32mINFO[0m:     [27-01-2025 17:30:07] Application startup complete.
+[32mINFO[0m:     [27-01-2025 17:30:07] Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [27-01-2025 17:30:18] ::1:65261 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:30:18] ::1:65262 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:30:18] ::1:65262 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:30:21] ::1:65265 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:30:21] ::1:65266 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:30:21] ::1:65266 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:31:05] ::1:65269 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:31:05] ::1:65270 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:31:05] ::1:65270 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:31:09] ::1:65273 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:31:09] ::1:65274 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:31:09] ::1:65274 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [27-01-2025 17:34:46] Shutting down
+[32mINFO[0m:     [27-01-2025 17:34:46] Waiting for application shutdown.
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component System
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component SegmentAPI
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component LocalExecutor
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component Posthog
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component SqliteDB
+[36mDEBUG[0m:    [27-01-2025 17:34:46] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [27-01-2025 17:34:46] Application shutdown complete.
+[32mINFO[0m:     [27-01-2025 17:34:46] Finished server process [[36m15932[0m]

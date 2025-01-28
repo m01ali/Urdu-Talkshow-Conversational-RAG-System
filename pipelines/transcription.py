@@ -20,7 +20,7 @@ class AudioTranscription:
         self.compute_type = compute_type
         try:
             self.model = whisperx.load_model("large", self.device, compute_type=self.compute_type)  # Use a smaller model
-            self.diarize_model = whisperx.DiarizationPipeline(use_auth_token=hf_token, device=self.device)
+            self.diarize_model = whisperx.DiarizationPipeline(use_auth_token=HUGGING_FACE_KEY, device=self.device)
         except Exception as e:
             print(f"Error loading models: {e}")
             raise
