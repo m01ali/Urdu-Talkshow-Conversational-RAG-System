@@ -15,7 +15,7 @@ GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 class AudioTranscription:
-    def __init__(self, device="cuda", batch_size=16, compute_type="float16"):
+    def __init__(self, device=device, batch_size=16, compute_type="float16"):
         self.device = device
         self.batch_size = batch_size
         self.compute_type = compute_type

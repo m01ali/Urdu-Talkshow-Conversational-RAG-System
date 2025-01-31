@@ -111,8 +111,8 @@ class SaveEmbeddingsPipeline:
 
 
     def get_retriever(self, collectionname):
-        vecotr_store = self.get_vector_store(collectionname)
-        retriever = vecotr_store.as_retriever(
+        vector_store = self.get_vector_store(collectionname)
+        retriever = vector_store.as_retriever(
             search_type="similarity", search_kwargs={"k":5}
         )
         return retriever
