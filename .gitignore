@@ -1,7 +1,7 @@
 # Virtual environment
 env/
 venv/
-
+.venv/
 # Python cache
 __pycache__/
 *.py[cod]
@@ -46,3 +46,14 @@ build/
 
 # Exclude Downloaded-audios folder
 Downloaded-audios/
+
+# Generated transcripts
+transcripts/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store

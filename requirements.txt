@@ -221,7 +221,7 @@ uvicorn==0.34.0
 watchfiles==1.0.3
 websocket-client==1.8.0
 websockets==14.1
-whisperx @ file:///D:/talkshow/whisperX
+# whisperx @ file:///D:/talkshow/whisperX
 wrapt==1.17.0
 yarl==1.18.3
 zipp==3.21.0
